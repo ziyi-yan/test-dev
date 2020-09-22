@@ -1,3 +1,27 @@
-test1
-1
-2
+{
+  "TechLeaders": [
+    {
+      "GithubId": "Rustin-Liu"
+    }
+  ],
+  "Maintainers": [
+    {
+      "GithubId": "Rustin-Liu"
+    }
+  ],
+  "Committers": [
+    {
+      "GithubId": "Rustin-Liu"
+    }
+  ],
+  "Reviewers": [
+    {
+      "GithubId": "Rustin-Liu"
+    }
+  ],
+  "ActiveContributors": [
+    {
+      "GithubId": "Rustin-Liu"
+    }
+  ]
+}
