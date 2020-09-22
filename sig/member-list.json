@@ -1,0 +1,23 @@
+{
+  "techLeaders": [
+    {
+      "githubId": "Rustin-Liu1",
+      "email": "test@gmail.com"
+    }
+  ],
+  "committers": [
+    {
+      "githubId": "Rustin-Liu1"
+    }
+  ],
+  "reviewers": [
+    {
+      "githubId": "Rustin-Liu2"
+    }
+  ],
+  "activeContributors": [
+    {
+      "githubId": "Rustin-Liu3"
+    }
+  ]
+}
