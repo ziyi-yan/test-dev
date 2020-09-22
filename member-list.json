@@ -1,22 +1,22 @@
 {
-  "TechLeaders": [
+  "techLeaders": [
     {
-      "GithubId": "Rustin-Liu"
+      "githubId": "Rustin-Liu"
     }
   ],
-  "Committers": [
+  "committers": [
     {
-      "GithubId": "Rustin-Liu"
+      "githubId": "Rustin-Liu"
     }
   ],
-  "Reviewers": [
+  "reviewers": [
     {
-      "GithubId": "Rustin-Liu"
+      "githubId": "Rustin-Liu"
     }
   ],
-  "ActiveContributors": [
+  "activeContributors": [
     {
-      "GithubId": "Rustin-Liu"
+      "githubId": "Rustin-Liu"
     }
   ]
 }
