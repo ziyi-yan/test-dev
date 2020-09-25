@@ -10,12 +10,16 @@
     {
       "githubId": "Rustin-Liu12",
       "email": "test@gmail.com"
-    }
-  ],
-  "reviewers": [
+    },
     {
       "githubId": "Rustin-Liu2"
     }
   ],
-  "activeContributors": []
+  "reviewers": [
+  ],
+  "activeContributors": [
+    {
+      "githubId": "Rustin-Liu3"
+    }
+  ]
 }
