@@ -6,7 +6,12 @@
       "email": "test@gmail.com"
     }
   ],
-  "coLeaders": [{}],
+  "coLeaders": [
+    {
+      "githubId": "Rustin-Liu12",
+      "email": "test@gmail.com"
+    }
+  ],
   "committers": [
     {
       "githubId": "Rustin-Liu12",
