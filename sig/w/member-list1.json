@@ -6,23 +6,29 @@
       "email": "test@gmail.com"
     }
   ],
+  "coLeaders": [
+    {
+      "githubId": "Rustin-Liu1",
+      "email": "test@gmail.com"
+    }
+  ],
   "committers": [
     {
-      "githubId": "Rustin-Liu12",
+      "githubId": "Rustin-Liu2",
       "email": "test@gmail.com"
     },
     {
-      "githubId": "Rustin-Liu2"
+      "githubId": "Rustin-Liu3"
     }
   ],
   "reviewers": [
     {
-      "githubId": "Rustin-Liu2"
+      "githubId": "Rustin-Liu4"
     }
   ],
   "activeContributors": [
     {
-      "githubId": "Rustin-Liu3"
+      "githubId": "Rustin-Liu5"
     }
   ]
 }
