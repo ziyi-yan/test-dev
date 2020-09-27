@@ -2,14 +2,14 @@
   "name": "test",
   "techLeaders": [
     {
-      "githubId": "Rustin-Liu",
+      "githubId": "Rustin-Liu0",
       "email": "test@gmail.com"
     }
   ],
   "coLeaders": [
     {
       "githubId": "Rustin-Liu1",
-      "email": "test@gmail.com"
+      "email": "test1@gmail.com"
     }
   ],
   "committers": [
