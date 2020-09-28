@@ -1,6 +1,10 @@
 {
   "name": "test1",
   "techLeaders": [
+    {
+      "githubId": "Rustin-Liu0",
+      "email": "test@gmail.com"
+    }
   ],
   "coLeaders": [
     {
