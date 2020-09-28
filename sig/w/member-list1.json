@@ -24,14 +24,14 @@
   "reviewers": [
     {
       "githubId": "Rustin-Liu4"
+    },
+    {
+      "githubId": "Rustin-Liu6"
     }
   ],
   "activeContributors": [
     {
       "githubId": "Rustin-Liu5"
-    },
-    {
-      "githubId": "Rustin-Liu6"
     }
   ]
 }
