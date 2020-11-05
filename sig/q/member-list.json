@@ -4,33 +4,36 @@
   ],
   "coLeaders": [
     {
-      "githubId": "Rustin-Liu1",
+      "githubName": "Rustin-Liu1",
       "email": "test1@gmail.com"
     }
   ],
   "committers": [
     {
-      "githubId": "Rustin-Liu2",
+      "githubName": "Rustin-Liu2",
       "email": "test@gmail.com"
     },
     {
-      "githubId": "Rustin-Liu3"
+      "githubName": "Rustin-Liu3"
     },
     {
-      "githubId": "Rustin-Liu6"
+      "githubName": "Rustin-Liu6"
     }
   ],
   "reviewers": [
     {
-      "githubId": "Rustin-Liu4"
+      "githubName": "Rustin-Liu4"
     }
   ],
   "activeContributors": [
     {
-      "githubId": "Rustin-Liu5"
+      "githubName": "Rustin-Liu5"
     },
     {
-      "githubId": "Rustin-Liu7"
+      "githubName": "Rustin-Liu7"
+    },
+    {
+      "githubName": "Rustin-Liu8"
     }
   ]
 }
