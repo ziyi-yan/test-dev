@@ -6,25 +6,25 @@
     {
       "githubName": "Rustin-Liu1",
       "email": "test1@gmail.com"
-    }
-  ],
-  "committers": [
+    },
     {
       "githubName": "Rustin-Liu2",
       "email": "test@gmail.com"
     }
   ],
-  "reviewers": [
+  "committers": [
     {
-      "githubName": "Rustin-Liu4"
+      "githubName": "Rustin-Liu3"
     }
+  ],
+  "reviewers": [
   ],
   "activeContributors": [
     {
-      "githubName": "Rustin-Liu5"
+      "githubName": "Rustin-Liu4"
     },
     {
-      "githubName": "Rustin-Liu7"
+      "githubName": "Rustin-Liu5"
     }
   ]
 }
