@@ -1,0 +1,5 @@
+test:
+  - sig/w/*
+
+test1:
+  - sig/q/*
