@@ -3,7 +3,7 @@ presubmits:
     decorate: true
     run_if_changed: 'labels.yaml'
     branches:
-      - ^main$
+      - ^master$
     spec:
       containers:
         - image: gcr.io/k8s-prow/label_sync:v20201204-d90be1ef6b
