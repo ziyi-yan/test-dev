@@ -14,6 +14,8 @@ presubmits:
             - --confirm=false
             - --only=tidb-community-bots/test-dev
             - --token=/etc/github/token
+            - --git-user=rustin-bot
+            - --git-email=liudongpo@pingcap.com
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
