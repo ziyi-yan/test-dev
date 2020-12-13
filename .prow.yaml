@@ -22,3 +22,28 @@ presubmits:
         - name: github-token
           secret:
             secretName: github-token
+  - name: pull-test-dev-push
+    decorate: true
+    always_run: true
+    branches:
+      - ^master$
+    spec:
+      containers:
+        - image: rustinliu/rerere-test:latest
+          command:
+            - rerere
+          args:
+            - --github-token-path=/etc/github/token
+            - --dry-run=false
+            - --github-endpoint=https://api.github.com
+            - --contexts=hello
+            - --labels=status/can-merge
+            - --retesting-branch=try
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
