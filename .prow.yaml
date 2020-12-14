@@ -1,0 +1,53 @@
+presubmits:
+  - name: pull-test-dev-validate-labels-yaml
+    decorate: true
+    run_if_changed: 'labels.yaml'
+    branches:
+      - ^master$
+    spec:
+      containers:
+        - image: gcr.io/k8s-prow/label_sync:v20201204-d90be1ef6b
+          command:
+            - /app/label_sync/app.binary
+          args:
+            - --config=labels.yaml
+            - --confirm=false
+            - --only=tidb-community-bots/test-dev
+            - --token=/etc/github/token
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
+  - name: pull-test-dev-push
+    decorate: true
+    always_run: true
+    branches:
+      - ^master$
+    spec:
+      containers:
+        - image: rustinliu/rerere-test:latest
+          command:
+            - rerere
+          args:
+            - --github-token-path=/etc/github/token
+            - --dry-run=false
+            - --github-endpoint=https://api.github.com
+            - --contexts=hello
+            - --labels=status/can-merge
+            - --retesting-branch=try
+            - --git-user=rustin-bot
+            - --git-email=liudongpo@pingcap.com
+            - --git-user-from-github=false
+            - --git-token-path=/etc/github/token
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token

@@ -15,10 +15,11 @@
   "committers": [
     {
       "githubName": "Rustin-Liu3"
+    },    {
+      "githubName": "Rustin-Liu6"
     }
   ],
-  "reviewers": [
-  ],
+  "reviewers": [],
   "activeContributors": [
     {
       "githubName": "Rustin-Liu4"
