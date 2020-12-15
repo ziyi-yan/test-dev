@@ -29,14 +29,14 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - image: rustinliu/rerere-test:latest
+        - image: rustinliu/rerere-component:latest
           command:
             - rerere
           args:
             - --github-token-path=/etc/github/token
             - --dry-run=false
             - --github-endpoint=https://api.github.com
-            - --contexts=hello
+            - --requireContexts=hello
             - --labels=status/can-merge
             - --retesting-branch=try
             - --git-user=rustin-bot
