@@ -25,8 +25,8 @@ presubmits:
   - name: pull-test-dev-rerere
     decorate: true
     always_run: true
-    trigger: "(?mi)^/merge\\s*$"
-    rerun_command: "/merge"
+    trigger: "(?mi)^/(merge|rerere)\\s*$"
+    rerun_command: "/rerere"
     max_concurrency: 1
     branches:
       - ^master$
