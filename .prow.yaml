@@ -22,7 +22,7 @@ presubmits:
         - name: github-token
           secret:
             secretName: github-token
-  - name: pull-test-dev-push
+  - name: pull-test-dev-rerere
     decorate: true
     always_run: true
     trigger: "(?mi)^/merge\\s*$"
