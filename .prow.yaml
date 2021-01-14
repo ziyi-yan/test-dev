@@ -25,32 +25,23 @@ presubmits:
   - name: pull-test-dev-rerere
     decorate: true
     always_run: true
-    trigger: "(?mi)^/(merge|rerere)\\s*$"
-    rerun_command: "/rerere"
     max_concurrency: 1
     branches:
       - ^master$
     spec:
       containers:
-        - image: rustinliu/rerere-test:latest
-          command:
-            - rerere
-          args:
-            - --github-token-path=/etc/github/token
-            - --dry-run=false
-            - --github-endpoint=https://api.github.com
-            - --require-contexts=hello
-            - --labels=status/can-merge
-            - --retesting-branch=try
-            - --git-user=rustin-bot
-            - --git-email=liudongpo@pingcap.com
-            - --git-user-from-github=false
-            - --git-token-path=/etc/github/token
-          volumeMounts:
-            - name: github-token
-              mountPath: /etc/github
-              readOnly: true
-      volumes:
-        - name: github-token
-          secret:
-            secretName: github-token
+        - name: docker-cmds
+          image: docker:1.12.6
+          command: [ 'docker', 'run', '-p', '80:80', 'httpd:latest' ]
+          resources:
+            requests:
+              cpu: 10m
+              memory: 256Mi
+        - name: dind-daemon
+          image: docker:1.12.6-dind
+          resources:
+            requests:
+              cpu: 20m
+              memory: 512Mi
+          securityContext:
+            privileged: true
