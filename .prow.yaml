@@ -41,7 +41,7 @@ presubmits:
             - name: DOCKER_HOST
               value: tcp://localhost:2375
         - name: dind-daemon
-          command: [ '' ]
+          command: [ 'docker', 'run', '-p', '80:80', 'httpd:latest' ]
           image: docker:dind
           resources:
             requests:
