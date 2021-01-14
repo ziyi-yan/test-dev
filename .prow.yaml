@@ -30,12 +30,10 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - image: ubuntu:18.04
+        - image: centos:centos7
           command: ["/bin/bash", "-c"]
           args:
-            - apt update ;
-              apt remove docker docker-engine docker.io containerd runc -y;
-              docker run --rm mysql/mysql-server:8.0.22;
-              apt install docker-ce docker-ce-cli containerd.io -y;
+            - systemctl start docker;
+              docker ps;
           securityContext:
             privileged: true
