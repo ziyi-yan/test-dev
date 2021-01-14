@@ -30,10 +30,16 @@ presubmits:
       - ^master$
     spec:
       containers:
+        - image: docker:1.12.6
+          command: [ 'docker', 'run', '-p', '80:80', 'httpd:latest' ]
+          resources:
+            requests:
+              cpu: 10m
+              memory: 256Mi
+          env:
+            - name: DOCKER_HOST
+              value: tcp://localhost:2375
         - image: docker:1.12.6-dind
-          command: ["/bin/bash", "-c"]
-          args:
-            - docker run --rm mysql/mysql-server:8.0.22;
           resources:
             requests:
               cpu: 20m
