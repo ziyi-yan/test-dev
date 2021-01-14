@@ -39,8 +39,9 @@ presubmits:
           env:
             - name: DOCKER_HOST
               value: tcp://localhost:2375
-        - image: docker:1.12.6-dind
-          command: []
+        - name: dind-daemon
+          image: docker:1.12.6-dind
+          command: [ '--registry-mirror=https://dockerhub.azk8s.cn' ]
           resources:
             requests:
               cpu: 20m
