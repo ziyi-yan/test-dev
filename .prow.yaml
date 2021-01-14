@@ -30,15 +30,10 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - name: docker-cmds
-          image: docker:1.12.6
-          command: [ 'docker', 'run', '-p', '80:80', 'httpd:latest' ]
-          resources:
-            requests:
-              cpu: 10m
-              memory: 256Mi
-        - name: dind-daemon
-          image: docker:1.12.6-dind
+        - image: docker:1.12.6-dind
+          command: ["/bin/bash", "-c"]
+          args:
+            - docker run --rm mysql/mysql-server:8.0.22;
           resources:
             requests:
               cpu: 20m
