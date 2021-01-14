@@ -30,10 +30,7 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - image: centos:latest
-          command: ["/bin/bash", "-c"]
-          args:
-            - systemctl start docker;
-              docker ps;
+        - image: gcr.io/k8s-testimages/bootstrap:v20210108-5927ee692c
+          command: ["docker", "ps"]
           securityContext:
             privileged: true
