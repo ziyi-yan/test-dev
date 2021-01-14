@@ -36,7 +36,7 @@ presubmits:
             - service docker start ;
               sleep 60 ;
               docker ps ;
-              docker run -p 80:80 httpd:latest;
+              docker run -d -p 80:80 httpd:latest;
               docker ps ;
           securityContext:
             privileged: true
