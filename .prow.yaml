@@ -31,6 +31,9 @@ presubmits:
     spec:
       containers:
         - image: gcr.io/k8s-testimages/bootstrap:v20210108-5927ee692c
-          command: ["docker", "ps"]
+          command: ["/bin/bash", "-c"]
+          args:
+            - service docker start ;
+              docker ps ;
           securityContext:
             privileged: true
