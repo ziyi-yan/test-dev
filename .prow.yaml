@@ -30,7 +30,7 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - image: centos:centos7
+        - image: centos:latest
           command: ["/bin/bash", "-c"]
           args:
             - systemctl start docker;
