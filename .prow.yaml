@@ -31,7 +31,6 @@ presubmits:
     spec:
       containers:
         - image: docker:dind
-          command: []
           resources:
             requests:
               cpu: 20m
