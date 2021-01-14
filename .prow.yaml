@@ -32,3 +32,5 @@ presubmits:
       containers:
         - image: ubuntu:18.04
           command: [ 'docker', 'run', '-p', '80:80', 'httpd:latest' ]
+          securityContext:
+            privileged: true
