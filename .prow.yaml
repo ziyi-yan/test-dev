@@ -30,8 +30,7 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - name: docker-cmds
-          image: docker:1.12.6
+        - image: docker:1.12.6
           command: [ 'docker', 'run', '-p', '80:80', 'httpd:latest' ]
           resources:
             requests:
@@ -40,8 +39,7 @@ presubmits:
           env:
             - name: DOCKER_HOST
               value: tcp://localhost:2375
-        - name: dind-daemon
-          image: docker:1.12.6-dind
+        - image: docker:1.12.6-dind
           command: []
           resources:
             requests:
