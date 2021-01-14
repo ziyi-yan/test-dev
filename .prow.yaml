@@ -34,7 +34,7 @@ presubmits:
           command: ["/bin/bash", "-c"]
           args:
             - service docker start ;
-              sleep 60
-              docker ps
+              sleep 60 ;
+              docker ps ;
           securityContext:
             privileged: true
