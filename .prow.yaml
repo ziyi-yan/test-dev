@@ -33,6 +33,11 @@ presubmits:
     spec:
       containers:
         - image: docker.io/ladrift/chingwei:latest
+          resources:
+            requests:
+              memory: "2500Mi"
+            limits:
+              memory: "2500Mi"
           command:
             - chingwei
           args:
