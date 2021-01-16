@@ -1,7 +1,7 @@
 presubmits:
   - name: pull-test-dev-validate-labels-yaml
     decorate: true
-    run_if_changed: 'labels.yaml'
+    run_if_changed: "labels.yaml"
     branches:
       - ^master$
     spec:
@@ -32,20 +32,11 @@ presubmits:
       - ^master$
     spec:
       containers:
-        - image: rustinliu/rerere-test:latest
+        - image: docker.io/ladrift/chingwei:latest
           command:
-            - rerere
+            - chingwei
           args:
             - --github-token-path=/etc/github/token
-            - --dry-run=false
-            - --github-endpoint=https://api.github.com
-            - --require-contexts=hello
-            - --labels=status/can-merge
-            - --retesting-branch=try
-            - --git-user=rustin-bot
-            - --git-email=liudongpo@pingcap.com
-            - --git-user-from-github=false
-            - --git-token-path=/etc/github/token
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
@@ -54,3 +45,5 @@ presubmits:
         - name: github-token
           secret:
             secretName: github-token
+          securityContext:
+            privileged: true
