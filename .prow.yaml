@@ -44,6 +44,7 @@ presubmits:
             privileged: true
           args:
             - --github-token-path=/etc/github/token
+            - --dry-run=false
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
