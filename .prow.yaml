@@ -40,6 +40,8 @@ presubmits:
               memory: "2500Mi"
           command:
             - chingwei
+          securityContext:
+            privileged: true
           args:
             - --github-token-path=/etc/github/token
           volumeMounts:
@@ -50,5 +52,3 @@ presubmits:
         - name: github-token
           secret:
             secretName: github-token
-          securityContext:
-            privileged: true
